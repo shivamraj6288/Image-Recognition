@@ -1,29 +1,4 @@
-<<<<<<< HEAD
-CNN
-	Features-Divides the image into multiple regions and then classify each region into various classes.	
 
-	Time per image = __
-
-	Drawbacks- Needs a lot of regions to predict accurately and hence high computation time.
- RCNN
- 	Features-Uses selective search to generate regions. Extracts around 2000 regions from each image.	
-
- 	Time per image = 40-50 seconds	
-
- 	Drawbacks- High computation time as each region is passed to the CNN separately also it uses three different model for making predictions.
-Fast RCNN
-	Features-Each image is passed only once to the CNN and feature maps are extracted. Selective search is used on these maps to generate predictions. Combines all the three models used in RCNN together.	
-
-	Time per image = 2 seconds	
-
-	Drawbacks- Selective search is slow and hence computation time is still high.
-Faster RCNN
-	Features-Replaces the selective search method with region proposal network which made the algorithm much faster.	
-
-	Time per image = 0.2 seconds	
-
-	Drawbacks- Object proposal takes time and as there are different systems working one after the other, the performance of systems depends on how the previous system has performed.
-=======
 CNN
 	Features-Divides the image into multiple regions and then classify each region into various classes.	
 
@@ -50,4 +25,8 @@ Faster RCNN
 	Drawbacks- Object proposal takes time and as there are different systems working one after the other, the performance of systems depends on how the previous system has performed.
 
 =======================================================RCNN Completed=======================================================
->>>>>>> 1766aa8d3787f5026cd878df61755cba1f3eb58f
+YOLO - a single CNN predicts bounding boxes and class bot, takes the image, classify it into SxS grids and within each grid make m bounding boxes. Each boumdimg box gives a class probability and an offset value for bounding box, all the results are then combined to locate the image. 
+	Drawback of yolo- hard to recognise small objects in an image 
+
+
+https://towardsdatascience.com/r-cnn-fast-r-cnn-faster-r-cnn-yolo-object-detection-algorithms-36d53571365e
